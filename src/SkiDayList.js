@@ -8,7 +8,7 @@ const SkiDayList = ({ days, filter }) => {
     return (
         <div className="ski-day-list">
             <table>
-                <thead> 
+                <thead>  
                     <tr>
                         <th>Date</th>
                         <th>Resort</th>
