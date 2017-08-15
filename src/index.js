@@ -5,7 +5,7 @@ import SkiDayCount from './SkiDayCount';
 import SkiDayList from './SkiDayList';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<SkiDayCount />, document.getElementById('root'));
+ReactDOM.render(<SkiDayCount backcountry={200} />, document.getElementById('root'));
 
 // ReactDOM.render(<SkiDayList days={
 //     [
