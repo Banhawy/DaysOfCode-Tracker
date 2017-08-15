@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Whoops404 from './Whoops404';
 import registerServiceWorker from './registerServiceWorker';
 import { Router, Route, hashHistory } from 'react-router';
 
