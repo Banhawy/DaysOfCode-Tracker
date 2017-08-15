@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import Terrain from 'react-icons/lib/md/terrain';
+import SnowFlake from 'react-icons/lib/ti/weather-snow';
+import Calendar from 'react-icons/lib/fa/calendar';  
 
 class SkiDayCount extends Component {
   percentToDecimal(decimal){
@@ -17,14 +20,17 @@ class SkiDayCount extends Component {
       <div className="ski-day-count">
         <div className="total-days">
           <span>{this.props.total}</span>
+            <Calendar /> 
           <span> days</span>
         </div>
         <div className="powder-days">
-        <span>{this.props.powder}</span>
+          <span>{this.props.powder}</span>
+            <SnowFlake /> 
           <span> days</span>
         </div>
         <div className="backcountry-days">
-        <span>{this.props.backcountry}</span>
+          <span>{this.props.backcountry}</span>
+            <Terrain /> 
           <span> days</span>
         </div>
         <div className="">
