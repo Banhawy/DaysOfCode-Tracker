@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Terrain from 'react-icons/lib/md/terrain'; 
 import SnowFlake from 'react-icons/lib/ti/weather-snow';
 import Calendar from 'react-icons/lib/fa/calendar';
@@ -17,15 +17,32 @@ const SkiDayList = ({ days }) => {
                         <th>Backcountry</th>
                     </tr>
                 </thead>
+            
+                <tbody>
+                    {days.map((day, i ) => 
+                        <SkiDayRow key={i}
+                                {...day}/>
+                    )}
+                </tbody>
             </table>
-            <tbody>
-                {days.map((day, i ) => 
-                    <SkiDayRow key={i}
-                               {...day}/>
-                )}
-            </tbody>
         </div>
     )
+}
+
+SkiDayList.propTypes = {
+    days: function(days){
+        if (!Array.isArray(days)){
+            return new Error(
+                "SkiDayList should be an array"
+            )
+        } else if (! days.length){
+            return new Error(
+                "SkiDayList must have at least one record"
+            )
+        } else {
+            return null;
+        }
+    }
 }
 
 export default SkiDayList
