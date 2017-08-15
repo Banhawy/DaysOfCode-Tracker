@@ -3,11 +3,12 @@ import {Link} from 'react-router'
 
 import { SkiDayRow } from './SkiDayRow';
 
-const SkiDayList = ({ days }) => {
+const SkiDayList = ({ days, filter }) => {
+    const filteredDays = (!filter || !filter.match(/powder|backcountry/)) ? days: days.filter(day => day[filter])
     return (
         <div className="ski-day-list">
             <table>
-                <thead>
+                <thead> 
                     <tr>
                         <th>Date</th>
                         <th>Resort</th>
@@ -30,7 +31,7 @@ const SkiDayList = ({ days }) => {
                 </thead>
             
                 <tbody>
-                    {days.map((day, i ) => 
+                    {filteredDays.map((day, i ) => 
                         <SkiDayRow key={i}
                                 {...day}/>
                     )}
