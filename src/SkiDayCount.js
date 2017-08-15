@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 
 class SkiDayCount extends Component {
+  percentToDecimal(decimal){
+    return (
+      (decimal*100) + "%"
+    )
+  }
+
+  calcGoalProgress(total, goal){
+    return this.percentToDecimal(total/goal);
+  }
+
   render() {
     return (
       <div className="ski-day-count">
@@ -18,7 +28,11 @@ class SkiDayCount extends Component {
           <span> days</span>
         </div>
         <div className="">
-        <span>{this.props.goal}</span>
+        <span>
+          {this.calcGoalProgress(this.props.total, 
+                                 this.props.goal)
+          }
+          </span>
         </div>
       </div>
     );
