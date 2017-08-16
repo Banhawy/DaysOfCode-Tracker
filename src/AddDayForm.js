@@ -47,7 +47,7 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay }) => {
                 </div>
                 <div>
                     <input id="puzzles" type="checkbox" ref={input => _puzzles = input} />
-                    <label htmlFor="puzzles" style={style}>Puzzles</label>
+                    <label htmlFor="puzzles" style={style}>Challenges</label>
                 </div>
                 <button>Add Day</button>
             </form>

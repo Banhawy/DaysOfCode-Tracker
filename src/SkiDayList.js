@@ -14,7 +14,7 @@ const SkiDayList = ({ days, filter }) => {
                         <th>Resort</th>
                         <th>Commits</th>
                         <th>Readings</th>
-                        <th>Puzzles</th>
+                        <th>Challenges</th>
                     </tr>
                     <tr>
                         <td colSpan={4}>
@@ -28,7 +28,7 @@ const SkiDayList = ({ days, filter }) => {
                                 Readings
                             </Link>
                             <Link to="/list-days/puzzles">
-                                Puzzles
+                                Challenges
                             </Link>
                         </td>
                     </tr>

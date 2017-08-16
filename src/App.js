@@ -8,15 +8,7 @@ class App extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            allSkiDays: [
-                {
-                    resort: "Napa Valley",
-                    date: "07/1/2016",
-                    commit: true,
-                    readings: false,
-                    puzzles: false
-                }
-            ]
+            allSkiDays: []
         }
         this.addDay = this.addDay.bind(this)
     }
