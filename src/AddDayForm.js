@@ -1,31 +1,36 @@
 import React from 'react'
 
-const AddDayForm = ({resort, date, powder, backcountry, onNewDay }) => {
-    let _resort, _date, _powder, _backcountry
+const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay }) => {
+    let _resort, _date, _commit, _readings, _puzzles
+    const style = {
+        color: 'white'
+    }
     const submit = (e) => {
         onNewDay({
             resort: _resort.value,
             date: _date.value,
-            powder: _powder.value,
-            backcountry: _backcountry.value
+            commit: _commit.checked,
+            readings: _readings.checked,
+            puzzles: _puzzles.checked
         })
         e.preventDefault()
         _resort.value = ''
         _date.value = ''
-        _powder.value = false
-        _backcountry.value = false
+        _commit.value = false
+        _readings.value = false
+        _puzzles.value = false
     }
     return (
         <div>
             <form onSubmit={submit} className="add-day-form">
-                <label htmlFor="resort">Resort Name</label>
+                <label htmlFor="resort" style={style}>Resort Name</label>
                 <input id="form" 
                        type="text" 
                        required
                        defaultValue={resort}
                        ref={input => _resort = input} />
 
-                <label htmlFor="date">Date</label>
+                <label htmlFor="date" style={style}>Date</label>
                 <input id="date" 
                        type="date" 
                        required
@@ -33,12 +38,16 @@ const AddDayForm = ({resort, date, powder, backcountry, onNewDay }) => {
                        ref={input => _date = input} />
 
                 <div>
-                    <input id="powder" type="checkbox" ref={input => _powder = input}  />
-                    <label htmlFor="powder">Powder Day</label>
+                    <input id="commit" type="checkbox" ref={input => _commit = input}  />
+                    <label htmlFor="commit" style={style}>Commits</label>
                 </div>
                 <div>
-                    <input id="backcountry" type="checkbox" ref={input => _backcountry = input} />
-                    <label htmlFor="backcountry">Backcountry</label>
+                    <input id="readings" type="checkbox" ref={input => _readings = input} />
+                    <label htmlFor="readings" style={style}>Readings</label>
+                </div>
+                <div>
+                    <input id="puzzles" type="checkbox" ref={input => _puzzles = input} />
+                    <label htmlFor="puzzles" style={style}>Puzzles</label>
                 </div>
                 <button>Add Day</button>
             </form>
@@ -49,8 +58,9 @@ const AddDayForm = ({resort, date, powder, backcountry, onNewDay }) => {
 AddDayForm.defaultProps = {
     resort: "Hollywood",
     date: "2017-01-11",
-    powder: true,
-    backcountry: false
+    commit: false,
+    readings: false,
+    puzzles: false
 }
 
 export default AddDayForm

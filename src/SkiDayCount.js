@@ -1,18 +1,13 @@
 import React, { Component  } from 'react';
 import './App.css';
-import Terrain from 'react-icons/lib/md/terrain';
-import SnowFlake from 'react-icons/lib/ti/weather-snow';
+import GoBook from 'react-icons/lib/go/book';
+import GoMarkGithub from 'react-icons/lib/go/mark-github';
+import GoPuzzle from 'react-icons/lib/go/puzzle';
 import Calendar from 'react-icons/lib/fa/calendar';  
 
 class SkiDayCount extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      total: 50,
-      powder: 50,
-      backcountry: 15,
-      goal: 100
-    }
   }
   
   percentToDecimal(decimal){
@@ -33,14 +28,19 @@ class SkiDayCount extends Component {
             <Calendar /> 
           <span> days</span>
         </div>
-        <div className="powder-days">
-          <span>{this.props.powder}</span>
-            <SnowFlake /> 
+        <div className="commit-days">
+          <span>{this.props.commit}</span>
+            <GoMarkGithub /> 
           <span> days</span>
         </div>
-        <div className="backcountry-days">
-          <span>{this.props.backcountry}</span>
-            <Terrain /> 
+        <div className="readings-days">
+          <span>{this.props.readings}</span>
+            <GoBook /> 
+          <span> days</span>
+        </div>
+        <div className="puzzle-days">
+          <span>{this.props.puzzles}</span>
+            <GoPuzzle /> 
           <span> days</span>
         </div>
         <div className="">
@@ -56,10 +56,11 @@ class SkiDayCount extends Component {
 }
 
 SkiDayCount.defaultProps = {
-  total: 50,
-  powder: 10,
-  backcountry: 15,
-  goal: 75
+  total: 0,
+  commit: 0,
+  backcountry: 0,
+  puzzles: 0,
+  goal: 100
 }
 
 export default SkiDayCount;

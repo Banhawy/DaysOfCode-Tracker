@@ -1,9 +1,9 @@
 import React from 'react';
-import Terrain from 'react-icons/lib/md/terrain'; 
-import SnowFlake from 'react-icons/lib/ti/weather-snow';
-// import Calendar from 'react-icons/lib/fa/calendar';
+import GoBook from 'react-icons/lib/go/book';
+import GoMarkGithub from 'react-icons/lib/go/mark-github';
+import GoPuzzle from 'react-icons/lib/go/puzzle';
 
-export const SkiDayRow = ({resort, date, powder, backcountry}) => {
+export const SkiDayRow = ({resort, date, commit, readings, puzzles}) => {
     return (
         
             <tr>
@@ -14,10 +14,13 @@ export const SkiDayRow = ({resort, date, powder, backcountry}) => {
                     {resort}
                 </td>
                 <td>
-                    {(powder) ? <SnowFlake /> : null}
+                    {(commit) ? <GoMarkGithub /> : null}
                 </td>
                 <td>
-                    {(backcountry) ? <Terrain  /> : null}
+                    {(readings) ? <GoBook  /> : null}
+                </td>
+                <td>
+                    {(puzzles) ? <GoPuzzle  /> : null}
                 </td>
             </tr>
     )
