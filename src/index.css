@@ -22,6 +22,76 @@ div.whoops-404 {
   align-items: center;
   flex-wrap: wrap; }
 
+form.add-day-form {
+  font-family: Verdana, sans-serif;
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  height: calc(100% - 12em); }
+  form.add-day-form > label,
+  form.add-day-form div {
+    margin: 1em 0; }
+  form.add-day-form label {
+    font-size: 1.5em;
+    text-shadow: 3px 3px 10px #9CEAC0;
+    height: 10px;
+    font-weight: bold;
+    color: #FFFFFF; }
+  form.add-day-form input[type="text"],
+  form.add-day-form input[type="date"] {
+    font-size: 1.5em;
+    padding: .25em;
+    border-radius: .2em;
+    outline: none;
+    min-height: 36px; }
+  form.add-day-form input[type="checkbox"] {
+    transform: scale(2);
+    margin: 0;
+    padding: 0;
+    margin-right: 2em; }
+  form.add-day-form div > label {
+    position: relative;
+    top: 2px;
+    color: #F6F2F2;
+    margin: 0.5em; }
+  form.add-day-form .autocomplete {
+    position: relative; }
+    form.add-day-form .autocomplete input {
+      width: calc(100% - .75em); }
+    form.add-day-form .autocomplete span {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 2em; }
+    form.add-day-form .autocomplete .suggestions {
+      position: absolute;
+      top: 2em;
+      left: 0;
+      width: auto;
+      height: auto;
+      max-height: 200px;
+      background-color: white;
+      overflow-y: scroll;
+      z-index: 3; }
+      form.add-day-form .autocomplete .suggestions p {
+        padding: 1em;
+        margin: 0; }
+        form.add-day-form .autocomplete .suggestions p:hover {
+          background-color: yellow; }
+      form.add-day-form .autocomplete .suggestions:empty {
+        display: none; }
+  form.add-day-form button {
+    margin: auto;
+    width: 100%;
+    font-size: 2em;
+    background-color: #1686fa;
+    font-weight: bold;
+    color: #9CEAC0;
+    padding: 5px; }
+
 nav.menu {
   background-color: black;
   left: 0;
@@ -31,7 +101,7 @@ nav.menu {
   display: flex;
   justify-content: space-around; }
   nav.menu a {
-    color: #d3d5e3; }
+    color: #9CEAC0; }
 
 div.goal-progress {
   width: 95%;
@@ -42,7 +112,7 @@ div.goal-progress {
   display: flex;
   font-family: verdana;
   justify-content: space-between;
-  text-shadow: 2px 2px 10px #d3d5e3; }
+  text-shadow: 2px 2px 10px #9CEAC0; }
   div.goal-progress progress {
     flex-basis: 66%;
     background-color: black;
@@ -58,7 +128,7 @@ div.goal-progress {
     padding: 0;
     left: 9px;
     outline: none;
-    text-shadow: 2px 2px 10px #d3d5e3; }
+    text-shadow: 2px 2px 10px #9CEAC0; }
   div.goal-progress button {
     font-size: .75em;
     padding: .25em;
@@ -143,71 +213,3 @@ div.show-errors {
       position: relative;
       top: 9px;
       right: 9px; }
-
-form.add-day {
-  font-family: Verdana, sans-serif;
-  width: 70%;
-  margin-left: 15%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: stretch;
-  height: calc(100% - 12em); }
-  form.add-day > label,
-  form.add-day div {
-    margin: 1em 0; }
-  form.add-day label {
-    font-size: 1.5em;
-    text-shadow: 3px 3px 10px #d3d5e3;
-    height: 10px;
-    font-weight: bold; }
-  form.add-day input[type="text"],
-  form.add-day input[type="date"] {
-    font-size: 1.5em;
-    padding: .25em;
-    border-radius: .2em;
-    outline: none;
-    min-height: 36px; }
-  form.add-day input[type="checkbox"] {
-    transform: scale(2);
-    margin: 0;
-    padding: 0;
-    margin-right: 2em; }
-  form.add-day div > label {
-    position: relative;
-    top: 2px;
-    color: #F6F2F2; }
-  form.add-day .autocomplete {
-    position: relative; }
-    form.add-day .autocomplete input {
-      width: calc(100% - .75em); }
-    form.add-day .autocomplete span {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      font-size: 2em; }
-    form.add-day .autocomplete .suggestions {
-      position: absolute;
-      top: 2em;
-      left: 0;
-      width: auto;
-      height: auto;
-      max-height: 200px;
-      background-color: white;
-      overflow-y: scroll;
-      z-index: 3; }
-      form.add-day .autocomplete .suggestions p {
-        padding: 1em;
-        margin: 0; }
-        form.add-day .autocomplete .suggestions p:hover {
-          background-color: yellow; }
-      form.add-day .autocomplete .suggestions:empty {
-        display: none; }
-  form.add-day button {
-    margin: auto;
-    width: 100%;
-    font-size: 2em;
-    background-color: #8a2a2d;
-    font-weight: bold;
-    color: #d3d5e3;
-    padding: 5px; }

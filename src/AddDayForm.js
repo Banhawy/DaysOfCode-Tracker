@@ -25,14 +25,14 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink 
     return (
         <div>
             <form onSubmit={submit} className="add-day-form">
-                <label htmlFor="resort" style={style}>Resort Name</label>
+                <label htmlFor="resort" >Resort Name</label>
                 <input id="form" 
                        type="text" 
                        required
                        defaultValue={resort}
                        ref={input => _resort = input} />
 
-                <label htmlFor="date" style={style}>Date</label>
+                <label htmlFor="date" >Date</label>
                 <input id="date" 
                        type="date" 
                        required
@@ -40,8 +40,8 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink 
                        ref={input => _date = input} />
                 <div>
                     <input id="commit" type="checkbox" ref={input => _commit = input}  />
-                    <label htmlFor="commit" style={style}>Commits</label>
-                    <label htmlFor="gitLink" style={style}>Link to Project</label>
+                    <label htmlFor="commit" >Commits</label>
+                    <label htmlFor="gitLink" >Link to Project</label>
                     <input id="gitLink" 
                         type="text"
                         defaultValue={gitLink}
@@ -49,11 +49,11 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink 
                 </div>
                 <div>
                     <input id="readings" type="checkbox" ref={input => _readings = input} />
-                    <label htmlFor="readings" style={style}>Readings</label>
+                    <label htmlFor="readings" >Readings</label>
                 </div>
                 <div>
                     <input id="puzzles" type="checkbox" ref={input => _puzzles = input} />
-                    <label htmlFor="puzzles" style={style}>Challenges</label>
+                    <label htmlFor="puzzles" >Challenges</label>
                 </div>
                 <button>Add Day</button>
             </form>
