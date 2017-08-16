@@ -1,7 +1,7 @@
 import React from 'react'
 
-const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay }) => {
-    let _resort, _date, _commit, _readings, _puzzles
+const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink }) => {
+    let _resort, _date, _commit, _gitLink, _readings, _puzzles
     const style = {
         color: 'white'
     }
@@ -10,12 +10,14 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay }) => {
             resort: _resort.value,
             date: _date.value,
             commit: _commit.checked,
+            gitLink: _gitLink.value,
             readings: _readings.checked,
             puzzles: _puzzles.checked
         })
         e.preventDefault()
         _resort.value = ''
         _date.value = ''
+        _gitLink = ''
         _commit.value = false
         _readings.value = false
         _puzzles.value = false
@@ -36,10 +38,14 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay }) => {
                        required
                        defaultValue={date}
                        ref={input => _date = input} />
-
                 <div>
                     <input id="commit" type="checkbox" ref={input => _commit = input}  />
                     <label htmlFor="commit" style={style}>Commits</label>
+                    <label htmlFor="gitLink" style={style}>Link to Project</label>
+                    <input id="gitLink" 
+                        type="text"
+                        defaultValue={gitLink}
+                        ref={input => _gitLink = input} />
                 </div>
                 <div>
                     <input id="readings" type="checkbox" ref={input => _readings = input} />
@@ -55,13 +61,13 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay }) => {
     )
 }
 
-AddDayForm.defaultProps = {
-    resort: "Hollywood",
-    date: "2017-01-11",
-    commit: false,
-    readings: false,
-    puzzles: false
-}
+// AddDayForm.defaultProps = {
+//     resort: "Hollywood",
+//     date: "2017-01-11",
+//     commit: false,
+//     readings: false,
+//     puzzles: false
+// }
 
 export default AddDayForm
 
