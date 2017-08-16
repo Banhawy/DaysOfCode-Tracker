@@ -12,8 +12,9 @@ class App extends Component {
                 {
                     resort: "Napa Valley",
                     date: "07/1/2016",
-                    powder: true,
-                    backcountry: false
+                    commit: true,
+                    readings: false,
+                    puzzles: false
                 }
             ]
         }
@@ -40,8 +41,9 @@ class App extends Component {
                 <Menu />
                 {(this.props.location.pathname === "/") ? 
                 <SkiDayCount total={this.countDays()}
-                             powder={this.countDays("powder")}
-                             backcountry={this.countDays("backcountry ")}/> :
+                             commit={this.countDays("commit")}
+                             readings={this.countDays("readings")}
+                             puzzles={this.countDays("puzzles")}/> :
                 (this.props.location.pathname === "/add-day") ?
                     <AddDayForm onNewDay={this.addDay}/> :
                     <SkiDayList days={this.state.allSkiDays}
