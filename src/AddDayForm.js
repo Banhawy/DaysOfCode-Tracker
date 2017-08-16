@@ -1,7 +1,7 @@
 import React from 'react'
 
-const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink }) => {
-    let _resort, _date, _commit, _gitLink, _readings, _puzzles
+const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink, readingLink}) => {
+    let _resort, _date, _commit, _gitLink, _readings, _puzzles, _readingLink
     const style = {
         color: 'white'
     }
@@ -12,12 +12,14 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink 
             commit: _commit.checked,
             gitLink: _gitLink.value,
             readings: _readings.checked,
+            readingLink: _readingLink.value,
             puzzles: _puzzles.checked
         })
         e.preventDefault()
         _resort.value = ''
         _date.value = ''
         _gitLink = ''
+        _readingLink = ''
         _commit.value = false
         _readings.value = false
         _puzzles.value = false
@@ -50,6 +52,11 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink 
                 <div>
                     <input id="readings" type="checkbox" ref={input => _readings = input} />
                     <label htmlFor="readings" >Readings</label>
+                    <label htmlFor="gitLink" >Link to Reading</label>
+                    <input id="gitLink" 
+                        type="text"
+                        defaultValue={readingLink}
+                        ref={input => _readingLink = input} />
                 </div>
                 <div>
                     <input id="puzzles" type="checkbox" ref={input => _puzzles = input} />
