@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import {Link} from 'react-router'
 
 import { SkiDayRow } from './SkiDayRow';
@@ -39,22 +39,6 @@ const SkiDayList = ({ days, filter }) => {
             </table>
         </div>
     )
-}
-
-SkiDayList.propTypes = {
-    days: function(days){
-        if (!Array.isArray(days)){
-            return new Error(
-                "SkiDayList should be an array"
-            )
-        } else if (! days.length){
-            return new Error(
-                "SkiDayList must have at least one record"
-            )
-        } else {
-            return null;
-        }
-    }
 }
 
 export default SkiDayList
