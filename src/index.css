@@ -9,8 +9,8 @@ div.app {
 h1, label {
   margin: 0; }
 
-div.app {
-  background-image: url("http://localhost:3333/rowdy.jpg");
+body {
+  background-image: url("bgi.gif");
   background-size: cover;
   background-position: center; }
 
@@ -177,7 +177,8 @@ form.add-day {
     margin-right: 2em; }
   form.add-day div > label {
     position: relative;
-    top: 2px; }
+    top: 2px;
+    color: #F6F2F2; }
   form.add-day .autocomplete {
     position: relative; }
     form.add-day .autocomplete input {
