@@ -4,16 +4,16 @@ const AddDayForm = ({resort, date, powder, backcountry, onNewDay }) => {
     let _resort, _date, _powder, _backcountry
     const submit = (e) => {
         onNewDay({
-            resort: _resort,
-            date: _date,
-            powder: _powder,
-            backcountry: _backcountry
+            resort: _resort.value,
+            date: _date.value,
+            powder: _powder.value,
+            backcountry: _backcountry.value
         })
         e.preventDefault()
-        _resort = ""
-        _date = ""
-        _powder = false
-        _backcountry = false
+        _resort.value = ''
+        _date.value = ''
+        _powder.value = false
+        _backcountry.value = false
     }
     return (
         <div>
