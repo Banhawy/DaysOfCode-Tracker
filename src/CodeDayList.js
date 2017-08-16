@@ -6,7 +6,7 @@ import { CodeDayRow } from './CodeDayRow';
 const CodeDayList = ({ days, filter }) => {
     const filteredDays = (!filter || !filter.match(/commit|readings|puzzles/)) ? days: days.filter(day => day[filter])
     return (
-        <div className="code-day-list">
+        <div className="Code-day-list">
             <table>
                 <thead>  
                     <tr>
