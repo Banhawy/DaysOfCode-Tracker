@@ -5,7 +5,7 @@ import GoMarkGithub from 'react-icons/lib/go/mark-github';
 import GoPuzzle from 'react-icons/lib/go/puzzle';
 import Calendar from 'react-icons/lib/fa/calendar';  
 
-class SkiDayCount extends Component {
+class CodeDayCount extends Component {
   constructor (props) {
     super(props)
   }
@@ -22,7 +22,7 @@ class SkiDayCount extends Component {
 
   render() {
     return (
-      <div className="ski-day-count">
+      <div className="code-day-count">
         <div className="total-days">
           <span>{this.props.total}</span>
             <Calendar /> 
@@ -55,7 +55,7 @@ class SkiDayCount extends Component {
   }
 }
 
-SkiDayCount.defaultProps = {
+CodeDayCount.defaultProps = {
   total: 0,
   commit: 0,
   backcountry: 0,
@@ -63,4 +63,4 @@ SkiDayCount.defaultProps = {
   goal: 100
 }
 
-export default SkiDayCount;
+export default CodeDayCount;

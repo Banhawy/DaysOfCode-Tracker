@@ -80,52 +80,52 @@ progress::-webkit-progress-value {
   progress {
     display: none; } }
 
-div.ski-day-count {
+div.code-day-count {
   display: flex;
   flex-wrap: wrap;
   font-size: 3em;
   height: calc(100% - 3em); }
-  div.ski-day-count > div {
+  div.code-day-count > div {
     display: flex;
     justify-content: center;
     align-items: center; }
-    div.ski-day-count > div.total-days {
+    div.code-day-count > div.total-days {
       flex-basis: 100%;
       font-size: 2em; }
-      div.ski-day-count > div.total-days span, div.ski-day-count > div.total-days svg {
+      div.code-day-count > div.total-days span, div.code-day-count > div.total-days svg {
         height: 200px; }
-    div.ski-day-count > div:not(.total-days) {
+    div.code-day-count > div:not(.total-days) {
       flex-basis: 50%; }
-    div.ski-day-count > div span, div.ski-day-count > div svg {
+    div.code-day-count > div span, div.code-day-count > div svg {
       background-color: white;
       height: 100px;
       display: flex;
       justify-content: center;
       align-items: center; }
-      div.ski-day-count > div span:first-child, div.ski-day-count > div svg:first-child {
+      div.code-day-count > div span:first-child, div.code-day-count > div svg:first-child {
         border-radius: 25px 0 0 25px;
         padding-left: 15px; }
-      div.ski-day-count > div span:last-child, div.ski-day-count > div svg:last-child {
+      div.code-day-count > div span:last-child, div.code-day-count > div svg:last-child {
         border-radius: 0 25px 25px 0;
         font-size: .5em;
         padding-right: 15px; }
 
-div.ski-day-list {
+div.code-day-list {
   height: calc(100% - 13em);
   overflow-y: scroll; }
-  div.ski-day-list table {
+  div.code-day-list table {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     font-family: verdana, sans-serif;
     font-size: 1.5em;
     text-align: center; }
-    div.ski-day-list table caption {
+    div.code-day-list table caption {
       background-color: white;
       background-color: rgba(255, 255, 255, 0.9);
       color: #8f2e32; }
-    div.ski-day-list table td {
+    div.code-day-list table td {
       padding: .2em; }
-    div.ski-day-list table a {
+    div.code-day-list table a {
       margin: 15px; }
 
 div.show-errors {

@@ -3,7 +3,7 @@ import GoBook from 'react-icons/lib/go/book';
 import GoMarkGithub from 'react-icons/lib/go/mark-github';
 import GoPuzzle from 'react-icons/lib/go/puzzle';
 
-export const SkiDayRow = ({resort, date, commit, readings, puzzles}) => {
+export const CodeDayRow = ({resort, date, commit, readings, puzzles, gitLink}) => {
     return (
         
             <tr>
@@ -14,7 +14,7 @@ export const SkiDayRow = ({resort, date, commit, readings, puzzles}) => {
                     {resort}
                 </td>
                 <td>
-                    {(commit) ? <GoMarkGithub /> : null}
+                    {(commit) ? <a href={gitLink} target="_blank"> <GoMarkGithub /></a> : null}
                 </td>
                 <td>
                     {(readings) ? <GoBook  /> : null}

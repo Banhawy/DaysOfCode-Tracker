@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router'
 
-import { SkiDayRow } from './SkiDayRow';
+import { CodeDayRow } from './CodeDayRow';
 
-const SkiDayList = ({ days, filter }) => {
+const CodeDayList = ({ days, filter }) => {
     const filteredDays = (!filter || !filter.match(/commit|readings|puzzles/)) ? days: days.filter(day => day[filter])
     return (
-        <div className="ski-day-list">
+        <div className="code-day-list">
             <table>
                 <thead>  
                     <tr>
@@ -36,7 +36,7 @@ const SkiDayList = ({ days, filter }) => {
             
                 <tbody>
                     {filteredDays.map((day, i ) => 
-                        <SkiDayRow key={i}
+                        <CodeDayRow key={i}
                                 {...day}/>
                     )}
                 </tbody>
@@ -45,4 +45,4 @@ const SkiDayList = ({ days, filter }) => {
     )
 }
 
-export default SkiDayList
+export default CodeDayList
