@@ -27,8 +27,8 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink,
     return (
         <div>
             <form onSubmit={submit} className="add-day-form">
-                <label htmlFor="resort" >Resort Name</label>
-                <input id="form" 
+                <label htmlFor="resort" >Coding Activity</label>
+                <textarea id="form" 
                        type="text" 
                        required
                        defaultValue={resort}
