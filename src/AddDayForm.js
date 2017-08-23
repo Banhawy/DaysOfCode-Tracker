@@ -18,11 +18,11 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink,
         e.preventDefault()
         _resort.value = ''
         _date.value = ''
-        _gitLink = ''
-        _readingLink = ''
-        _commit.value = false
-        _readings.value = false
-        _puzzles.value = false
+        _gitLink.value = ''
+        _readingLink.value = ''
+        _commit.checked = false
+        _readings.checked = false
+        _puzzles.checked = false
     }
     return (
         <div>
@@ -69,9 +69,11 @@ const AddDayForm = ({resort, date, commit, readings, puzzles, onNewDay, gitLink,
 }
 
 // AddDayForm.defaultProps = {
-//     resort: "Hollywood",
-//     date: "2017-01-11",
+//     resort: '',
+//     date: '',
 //     commit: false,
+//     gitLink: '',
+//     readingLink: '',
 //     readings: false,
 //     puzzles: false
 // }
